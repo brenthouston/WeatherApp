@@ -9,7 +9,7 @@
     --second: rgb(97, 87, 116);
     --thrid: rgb(184, 157, 244);
     --forth: rgb(138, 129, 165);
-    --fith: rgb(56, 48, 68);
+    --fith: rgb(68, 58, 84);
 }
 
 header{
@@ -31,6 +31,7 @@ body{
 main{
     display: flex;
     flex-direction: row;
+    margin:1rem 5rem 5rem 5rem;
 }
 
 aside{
@@ -48,14 +49,25 @@ input{
     margin: 5px 15px 20px;
     background-color: var(--second);
     height: 2rem;
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.25rem;
+    color: white;
 }
 
 button{
+    color: whitesmoke;
+    font-size: 1.25rem;
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
     background-color: var(--forth);
-    height: 2rem;
+    height: 3rem;
     margin: 5px;
+    margin-bottom: 1rem;
     border-radius: 5px;
-    box-shadow: 0px 5px 10px -5px;
+    box-shadow: 0px 5px 10px -5px black;
 }
 
 section {
@@ -86,6 +98,6 @@ section {
     background-color: var(--fith);
     height: 13rem;
     width: 10rem;
-    box-shadow: 0px 0px 20px -5px rgb(132, 121, 166);
+    box-shadow: 0px 0px 20px -5px rgb(119, 108, 150);
     border-radius: 5px;
 }
