@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary: rgb(82, 71, 101);
+    --second: rgb(97, 87, 116);
+    --thrid: rgb(184, 157, 244);
+    --forth: rgb(138, 129, 165);
+    --fith: rgb(56, 48, 68);
+}
+
+header{
+    font-size: 2rem;
+    font-family: "forma-djr-display", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+    line-height: 5rem;
+    color: rgb(184, 157, 244);
+    height: 6rem;
+    background-color: var(--second);
+}
+
+body{
+    background-color: var(--primary);
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+}
+
+aside{
+    display: flex;
+    flex-direction: column;
+    color: var(--thrid);
+    font-size: 1.5rem;
+    font-family: "forma-djr-display", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+    margin: 10px;
+}
+input{
+    margin: 5px 15px 20px;
+    background-color: var(--second);
+    height: 2rem;
+}
+
+button{
+    background-color: var(--forth);
+    height: 2rem;
+    margin: 5px;
+    border-radius: 5px;
+    box-shadow: 0px 5px 10px -5px;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 20px;
+}
+
+#text-area{
+    background-color: var(--second);
+    border: 1px solid black;
+    height: 13rem;
+    width: 55rem;
+    margin: 20px;
+    box-shadow: 0px 5px 20px -15px;
+    border-radius: 5px;
+
+}
+
+#card-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+#card {
+    background-color: var(--fith);
+    height: 13rem;
+    width: 10rem;
+    box-shadow: 0px 0px 20px -5px rgb(132, 121, 166);
+    border-radius: 5px;
+}
