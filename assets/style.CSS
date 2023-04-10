@@ -12,23 +12,39 @@
     --forth: rgb(138, 129, 165);
     --fith: rgb(68, 58, 84);
 }
-li{
+.stat{
     color: whitesmoke;
-    font-size: 1.75rem;
+    font-size: 1.25rem;
     font-family: "josefin-sans", sans-serif;
     font-weight: 100;
     font-style: normal;
-    margin: 0px 0px 0px 30px 
+    margin: 0px 0px 0px 80px 
 }
+#temp{
+    color: whitesmoke;
+    line-height: 3rem;
+    font-size: 3rem;
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    width: 55rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+
 h2{
     
     color: whitesmoke;
-    font-size: 2rem;
-    font-family: "forma-djr-display", sans-serif;
-    font-weight: 800;
+    font-size: 3rem;
+    font-family: "ff-seria-sans", sans-serif;
+    font-weight: 700;
     font-style: normal;
     letter-spacing: 3px;
-    margin: 10px 10px 0px 30px ;
+    margin: 10px 5px 0px 0px ;
+    line-height: 3rem;
     
 }
 
@@ -103,7 +119,7 @@ section {
     align-items:flex-start;
     background-color: var(--second);
     border: 1px solid black;
-    height: 13rem;
+    height: 15rem;
     width: 55rem;
     margin: 20px;
     box-shadow: 0px 5px 20px -15px;
@@ -123,4 +139,18 @@ section {
     width: 10rem;
     box-shadow: 0px 0px 20px -5px rgb(119, 108, 150);
     border-radius: 5px;
+}
+#city-img {
+    width: 55rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#icon{
+    height: 50px;
+    margin: 10px 10px 0px 30px;
+    line-height: 2rem;
 }
