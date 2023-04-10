@@ -6,7 +6,7 @@
 }
 
 :root {
-    --primary: rgb(82, 71, 101);
+    --primary: rgb(68, 52, 94);
     --second: rgb(97, 87, 116);
     --thrid: rgb(184, 157, 244);
     --forth: rgb(138, 129, 165);
@@ -20,12 +20,21 @@
     font-style: normal;
     margin: 0px 0px 0px 80px 
 }
+#search{
+    font-size: 1.5rem;
+    font-family: "forma-djr-display", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    text-align: center;
+
+}
+
 #temp{
     color: whitesmoke;
-    line-height: 3rem;
-    font-size: 3rem;
-    font-family: "josefin-sans", sans-serif;
-    font-weight: 100;
+    line-height: 4.5rem;
+    font-size: 4.5rem;
+    font-family: "ff-seria-sans", sans-serif;
+    font-weight: 700;
     font-style: normal;
     width: 55rem;
     display: flex;
@@ -39,8 +48,8 @@ h2{
     
     color: whitesmoke;
     font-size: 3rem;
-    font-family: "ff-seria-sans", sans-serif;
-    font-weight: 700;
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 100;
     font-style: normal;
     letter-spacing: 3px;
     margin: 10px 5px 0px 0px ;
@@ -49,7 +58,7 @@ h2{
 }
 
 header{
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-family: "forma-djr-display", sans-serif;
     font-weight: 800;
     font-style: normal;
@@ -57,7 +66,7 @@ header{
     line-height: 5rem;
     color: rgb(184, 157, 244);
     height: 6rem;
-    background-color: var(--second);
+    background: linear-gradient(0.25turn, rgb(45, 27, 80), #361f49,rgb(45, 27, 80));
 }
 
 body{
@@ -98,7 +107,7 @@ button{
     font-family: "josefin-sans", sans-serif;
     font-weight: 100;
     font-style: normal;
-    background-color: var(--forth);
+    background: linear-gradient(0.25turn, rgb(76, 58, 113), #5b357a,rgb(76, 58, 113));
     height: 3rem;
     margin: 5px;
     margin-bottom: 1rem;
@@ -117,13 +126,14 @@ section {
     display: flex;
     flex-direction: column;
     align-items:flex-start;
-    background-color: var(--second);
-    border: 1px solid black;
+    background: linear-gradient(0.25turn, rgb(76, 58, 113), #5b357a,rgb(76, 58, 113));
+    border: 1px solid rgb(27, 21, 34);
     height: 15rem;
     width: 55rem;
     margin: 20px;
     box-shadow: 0px 5px 20px -15px;
     border-radius: 5px;
+    
 
 }
 
@@ -137,8 +147,10 @@ section {
     background-color: var(--fith);
     height: 13rem;
     width: 10rem;
-    box-shadow: 0px 0px 20px -5px rgb(119, 108, 150);
+    box-shadow: 0px 0px 20px -5px rgb(79, 69, 106);
     border-radius: 5px;
+    background: linear-gradient(0.25turn, rgb(45, 27, 80), #361f49,rgb(45, 27, 80));
+    border: .125px solid rgb(155, 116, 183);
 }
 #city-img {
     width: 55rem;
