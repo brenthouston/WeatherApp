@@ -16,22 +16,24 @@ Seattle.addEventListener('click', function(){
     }).then(function(data) {
         console.log(data);
         var Textarea = document.querySelector('#text-area')
-        var li = document.querySelector('li')
+        var li = document.querySelector('#temp')
         var CityH3 = Textarea.querySelector('h2')
+        var li2 = document.querySelector('#todaycond');
+        var li3 = document.querySelector("#todayhum");
+        var li4 = document.querySelector('#todaywdir');
+        var li5 =document.querySelector('#todaywspd');
+        var iconimg =  document.querySelector("#icon");
         var cityName = data.city.name;
         var temp = data.list[0].main.temp;
         var cel = temp- 273.15;
         var F = (cel * 1.8) +32;
-        var li2 = document.querySelector('ul').children[1];
         var cond = data.list[0].weather[0].description;
         var icon = data.list[0].weather[0].icon;
         var iconurl = "http://openweathermap.org/img/w/"+ icon + ".png";
-        var iconimg =  document.querySelector("#icon");
-        var li3 = document.querySelector("ul").children[2];
         var wind = data.list[0].wind.deg
         var winddir = '';
-        var li4 = document.querySelector('ul').children[3];
         var humidity = data.list[0].main.humidity
+        var windspeed = data.list[0].wind.speed;
         
             if(wind >= 337 || wind < 22){
                 winddir = "N"
@@ -53,11 +55,13 @@ Seattle.addEventListener('click', function(){
        
 
         iconimg.innerHTML = "<img src='" +iconurl + "'/>";
-        li.textContent = Math.round(F)+'º';
+        li.textContent = Math.round(F)+' º';
         CityH3.textContent = cityName;
         li2.textContent ="conditions: " + cond;
-        li3.textContent = "wind direction: "+ winddir;
-        li4.textContent = "humidity: " + humidity;
+        li3.textContent = "humidity: " + humidity + " %";
+        li4.textContent = "wind direction: "+ winddir;
+        li5.textContent = "wind: " +windspeed+" mph"
+
 
     //first day forecast
     //links to html
@@ -94,7 +98,7 @@ Seattle.addEventListener('click', function(){
             temph2.textContent = Math.round(F1) +'º';
             day1li1.textContent = cond1;
             day1li2.textContent = "wind: " + winddir1;
-            day1li3.textContent = "humidity: " + humidity1;
+            day1li3.textContent = "humidity: " + humidity1+"%";
            
 
             //second day forecast
@@ -132,7 +136,7 @@ Seattle.addEventListener('click', function(){
             temph3.textContent = Math.round(F2) +'º';
             day2li1.textContent = cond2;
             day2li2.textContent = "wind: " + winddir2;
-            day2li3.textContent = "humidity: " + humidity2;
+            day2li3.textContent = "humidity: " + humidity2+"%";
 
 
                      //Third day forecast
@@ -170,7 +174,7 @@ Seattle.addEventListener('click', function(){
             temph4.textContent = Math.round(F3) +'º';
             day3li1.textContent = cond3;
             day3li2.textContent = "wind: " + winddir3;
-            day3li3.textContent = "humidity: " + humidity3;
+            day3li3.textContent = "humidity: " + humidity3+"%";
            
 
                               //Fourth day forecast
@@ -208,7 +212,7 @@ Seattle.addEventListener('click', function(){
             temph5.textContent = Math.round(F4) +'º';
             day4li1.textContent = cond4;
             day4li2.textContent = "wind: " + winddir4;
-            day4li3.textContent = "humidity: " + humidity4;
+            day4li3.textContent = "humidity: " + humidity4+"%";
 
 
                               //Fifth day forecast
@@ -246,7 +250,7 @@ Seattle.addEventListener('click', function(){
             temph5.textContent = Math.round(F5) +'º';
             day5li1.textContent = cond5;
             day5li2.textContent = "wind: " + winddir5;
-            day5li3.textContent = "humidity: " + humidity5;
+            day5li3.textContent = "humidity: " + humidity5+"%";
     })
 })
 Chicago.addEventListener('click', function(){
@@ -298,7 +302,7 @@ Chicago.addEventListener('click', function(){
         CityH3.textContent = cityName;
         li2.textContent ="conditions: "+  cond;
         li3.textContent = "wind direction: "+ winddir;
-        li4.textContent = "humidity: " + humidity;
+        li4.textContent = "humidity: " + humidity+"%";
 
 
 
@@ -337,7 +341,7 @@ Chicago.addEventListener('click', function(){
             temph2.textContent = Math.round(F1) +'º';
             day1li1.textContent = cond1;
             day1li2.textContent = "wind: " + winddir1;
-            day1li3.textContent = "humidity: " + humidity;
+            day1li3.textContent = "humidity: " + humidity+"%";
 
                  //second day forecast
     //links to html
@@ -374,7 +378,7 @@ Chicago.addEventListener('click', function(){
             temph3.textContent = Math.round(F2) +'º';
             day2li1.textContent = cond2;
             day2li2.textContent = "wind: " + winddir2;
-            day2li3.textContent = "humidity: " + humidity2;
+            day2li3.textContent = "humidity: " + humidity2+"%";
 
 
                      //Third day forecast
@@ -412,7 +416,7 @@ Chicago.addEventListener('click', function(){
             temph4.textContent = Math.round(F3) +'º';
             day3li1.textContent = cond3;
             day3li2.textContent = "wind: " + winddir3;
-            day3li3.textContent = "humidity: " + humidity3;
+            day3li3.textContent = "humidity: " + humidity3+"%";
            
 
                               //Fourth day forecast
@@ -450,7 +454,7 @@ Chicago.addEventListener('click', function(){
             temph5.textContent = Math.round(F4) +'º';
             day4li1.textContent = cond4;
             day4li2.textContent = "wind: " + winddir4;
-            day4li3.textContent = "humidity: " + humidity4;
+            day4li3.textContent = "humidity: " + humidity4+"%";
 
 
                               //Fifth day forecast
@@ -488,7 +492,7 @@ Chicago.addEventListener('click', function(){
             temph5.textContent = Math.round(F5) +'º';
             day5li1.textContent = cond5;
             day5li2.textContent = "wind: " + winddir5;
-            day5li3.textContent = "humidity: " + humidity5;
+            day5li3.textContent = "humidity: " + humidity5+"%";
     })
 })
 NewYork.addEventListener('click', function(){
@@ -499,22 +503,24 @@ NewYork.addEventListener('click', function(){
     }).then(function(data) {
         console.log(data);
         var Textarea = document.querySelector('#text-area')
-        var li = document.querySelector('li')
+        var li = document.querySelector('#temp')
         var CityH3 = Textarea.querySelector('h2')
+        var li2 = document.querySelector('#todaycond');
+        var li3 = document.querySelector("#todayhum");
+        var li4 = document.querySelector('#todaywdir');
+        var li5 =document.querySelector('#todaywspd');
+        var iconimg =  document.querySelector("#icon");
         var cityName = data.city.name;
         var temp = data.list[0].main.temp;
         var cel = temp- 273.15;
         var F = (cel * 1.8) +32;
-        var li2 = document.querySelector('ul').children[1];
         var cond = data.list[0].weather[0].description;
         var icon = data.list[0].weather[0].icon;
         var iconurl = "http://openweathermap.org/img/w/"+ icon + ".png";
-        var iconimg =  document.querySelector("#icon");
-        var li3 = document.querySelector("ul").children[2];
         var wind = data.list[0].wind.deg
         var winddir = '';
-        var li4 = document.querySelector('ul').children[3];
         var humidity = data.list[0].main.humidity
+        var windspeed = data.list[0].wind.speed;
         
             if(wind >= 337 || wind < 22){
                 winddir = "N"
@@ -538,9 +544,10 @@ NewYork.addEventListener('click', function(){
         iconimg.innerHTML = "<img src='" +iconurl + "'/>";
         li.textContent = Math.round(F)+' º';
         CityH3.textContent = cityName;
-        li2.textContent ="conditions: "+  cond;
-        li3.textContent = "wind direction: "+ winddir;
-        li4.textContent = "humidity: " + humidity;
+        li2.textContent ="conditions: " + cond;
+        li3.textContent = "humidity: " + humidity + " %";
+        li4.textContent = "wind direction: "+ winddir;
+        li5.textContent = "wind: " +windspeed+" mph"
 
 
     //first day forecast
@@ -578,7 +585,7 @@ NewYork.addEventListener('click', function(){
             temph2.textContent = Math.round(F1) +'º';
             day1li1.textContent = cond1;
             day1li2.textContent = "wind: " + winddir1;
-            day1li3.textContent = "humidity: " + humidity;
+            day1li3.textContent = "humidity: " + humidity+"%";
 
                  //second day forecast
     //links to html
@@ -615,7 +622,7 @@ NewYork.addEventListener('click', function(){
             temph3.textContent = Math.round(F2) +'º';
             day2li1.textContent = cond2;
             day2li2.textContent = "wind: " + winddir2;
-            day2li3.textContent = "humidity: " + humidity2;
+            day2li3.textContent = "humidity: " + humidity2+"%";
 
 
                      //Third day forecast
@@ -653,7 +660,7 @@ NewYork.addEventListener('click', function(){
             temph4.textContent = Math.round(F3) +'º';
             day3li1.textContent = cond3;
             day3li2.textContent = "wind: " + winddir3;
-            day3li3.textContent = "humidity: " + humidity3;
+            day3li3.textContent = "humidity: " + humidity3+"%";
            
 
                               //Fourth day forecast
@@ -691,7 +698,7 @@ NewYork.addEventListener('click', function(){
             temph5.textContent = Math.round(F4) +'º';
             day4li1.textContent = cond4;
             day4li2.textContent = "wind: " + winddir4;
-            day4li3.textContent = "humidity: " + humidity4;
+            day4li3.textContent = "humidity: " + humidity4+"%";
 
 
                               //Fifth day forecast
@@ -729,7 +736,7 @@ NewYork.addEventListener('click', function(){
             temph5.textContent = Math.round(F5) +'º';
             day5li1.textContent = cond5;
             day5li2.textContent = "wind: " + winddir5;
-            day5li3.textContent = "humidity: " + humidity5;
+            day5li3.textContent = "humidity: " + humidity5+"%";
     })
 })
 NewOrleans.addEventListener('click', function(){
@@ -740,22 +747,24 @@ NewOrleans.addEventListener('click', function(){
     }).then(function(data) {
         console.log(data);
         var Textarea = document.querySelector('#text-area')
-        var li = document.querySelector('li')
+        var li = document.querySelector('#temp')
         var CityH3 = Textarea.querySelector('h2')
+        var li2 = document.querySelector('#todaycond');
+        var li3 = document.querySelector("#todayhum");
+        var li4 = document.querySelector('#todaywdir');
+        var li5 =document.querySelector('#todaywspd');
+        var iconimg =  document.querySelector("#icon");
         var cityName = data.city.name;
         var temp = data.list[0].main.temp;
         var cel = temp- 273.15;
         var F = (cel * 1.8) +32;
-        var li2 = document.querySelector('ul').children[1];
         var cond = data.list[0].weather[0].description;
         var icon = data.list[0].weather[0].icon;
         var iconurl = "http://openweathermap.org/img/w/"+ icon + ".png";
-        var iconimg =  document.querySelector("#icon");
-        var li3 = document.querySelector("ul").children[2];
         var wind = data.list[0].wind.deg
         var winddir = '';
-        var li4 = document.querySelector('ul').children[3];
         var humidity = data.list[0].main.humidity
+        var windspeed = data.list[0].wind.speed;
         
             if(wind >= 337 || wind < 22){
                 winddir = "N"
@@ -779,9 +788,11 @@ NewOrleans.addEventListener('click', function(){
         iconimg.innerHTML = "<img src='" +iconurl + "'/>";
         li.textContent = Math.round(F)+' º';
         CityH3.textContent = cityName;
-        li2.textContent ="conditions: "+  cond;
-        li3.textContent = "wind direction: "+ winddir;
-        li4.textContent = "humidity: " + humidity;
+        li2.textContent ="conditions: " + cond;
+        li3.textContent = "humidity: " + humidity + " %";
+        li4.textContent = "wind direction: "+ winddir;
+        li5.textContent = "wind: " +windspeed+" mph"
+
 
 
     //first day forecast
@@ -819,7 +830,7 @@ NewOrleans.addEventListener('click', function(){
             temph2.textContent = Math.round(F1) +'º';
             day1li1.textContent = cond1;
             day1li2.textContent = "wind: " + winddir1;
-            day1li3.textContent = "humidity: " + humidity;
+            day1li3.textContent = "humidity: " + humidity+"%";
 
                  //second day forecast
     //links to html
@@ -856,7 +867,7 @@ NewOrleans.addEventListener('click', function(){
             temph3.textContent = Math.round(F2) +'º';
             day2li1.textContent = cond2;
             day2li2.textContent = "wind: " + winddir2;
-            day2li3.textContent = "humidity: " + humidity2;
+            day2li3.textContent = "humidity: " + humidity2+"%";
 
 
                      //Third day forecast
@@ -894,7 +905,7 @@ NewOrleans.addEventListener('click', function(){
             temph4.textContent = Math.round(F3) +'º';
             day3li1.textContent = cond3;
             day3li2.textContent = "wind: " + winddir3;
-            day3li3.textContent = "humidity: " + humidity3;
+            day3li3.textContent = "humidity: " + humidity3+"%";
            
 
                               //Fourth day forecast
@@ -932,7 +943,7 @@ NewOrleans.addEventListener('click', function(){
             temph5.textContent = Math.round(F4) +'º';
             day4li1.textContent = cond4;
             day4li2.textContent = "wind: " + winddir4;
-            day4li3.textContent = "humidity: " + humidity4;
+            day4li3.textContent = "humidity: " + humidity4+"%";
 
 
                               //Fifth day forecast
@@ -970,7 +981,7 @@ NewOrleans.addEventListener('click', function(){
             temph5.textContent = Math.round(F5) +'º';
             day5li1.textContent = cond5;
             day5li2.textContent = "wind: " + winddir5;
-            day5li3.textContent = "humidity: " + humidity5;
+            day5li3.textContent = "humidity: " + humidity5+"%";
     })
 })
 SanFrancisco.addEventListener('click', function(){
@@ -981,22 +992,24 @@ SanFrancisco.addEventListener('click', function(){
     }).then(function(data) {
         console.log(data);
         var Textarea = document.querySelector('#text-area')
-        var li = document.querySelector('li')
+        var li = document.querySelector('#temp')
         var CityH3 = Textarea.querySelector('h2')
+        var li2 = document.querySelector('#todaycond');
+        var li3 = document.querySelector("#todayhum");
+        var li4 = document.querySelector('#todaywdir');
+        var li5 =document.querySelector('#todaywspd');
+        var iconimg =  document.querySelector("#icon");
         var cityName = data.city.name;
         var temp = data.list[0].main.temp;
         var cel = temp- 273.15;
         var F = (cel * 1.8) +32;
-        var li2 = document.querySelector('ul').children[1];
         var cond = data.list[0].weather[0].description;
         var icon = data.list[0].weather[0].icon;
         var iconurl = "http://openweathermap.org/img/w/"+ icon + ".png";
-        var iconimg =  document.querySelector("#icon");
-        var li3 = document.querySelector("ul").children[2];
         var wind = data.list[0].wind.deg
         var winddir = '';
-        var li4 = document.querySelector('ul').children[3];
         var humidity = data.list[0].main.humidity
+        var windspeed = data.list[0].wind.speed;
         
             if(wind >= 337 || wind < 22){
                 winddir = "N"
@@ -1020,9 +1033,10 @@ SanFrancisco.addEventListener('click', function(){
         iconimg.innerHTML = "<img src='" +iconurl + "'/>";
         li.textContent = Math.round(F)+' º';
         CityH3.textContent = cityName;
-        li2.textContent ="conditions: " +  cond;
-        li3.textContent = "wind direction: "+ winddir;
-        li4.textContent = "humidity: " + humidity;
+        li2.textContent ="conditions: " + cond;
+        li3.textContent = "humidity: " + humidity + " %";
+        li4.textContent = "wind direction: "+ winddir;
+        li5.textContent = "wind: " +windspeed+" mph"
 
 
     //first day forecast
@@ -1060,7 +1074,7 @@ SanFrancisco.addEventListener('click', function(){
             temph2.textContent = Math.round(F1) +'º';
             day1li1.textContent = cond1;
             day1li2.textContent = "wind: " + winddir1;
-            day1li3.textContent = "humidity: " + humidity;
+            day1li3.textContent = "humidity: " + humidity+ "%";
 
                  //second day forecast
     //links to html
@@ -1097,7 +1111,7 @@ SanFrancisco.addEventListener('click', function(){
             temph3.textContent = Math.round(F2) +'º';
             day2li1.textContent = cond2;
             day2li2.textContent = "wind: " + winddir2;
-            day2li3.textContent = "humidity: " + humidity2;
+            day2li3.textContent = "humidity: " + humidity2 +"%";
 
 
                      //Third day forecast
@@ -1135,7 +1149,7 @@ SanFrancisco.addEventListener('click', function(){
             temph4.textContent = Math.round(F3) +'º';
             day3li1.textContent = cond3;
             day3li2.textContent = "wind: " + winddir3;
-            day3li3.textContent = "humidity: " + humidity3;
+            day3li3.textContent = "humidity: " + humidity3+ "%";
            
 
                               //Fourth day forecast
@@ -1173,7 +1187,7 @@ SanFrancisco.addEventListener('click', function(){
             temph5.textContent = Math.round(F4) +'º';
             day4li1.textContent = cond4;
             day4li2.textContent = "wind: " + winddir4;
-            day4li3.textContent = "humidity: " + humidity4;
+            day4li3.textContent = "humidity: " + humidity4+ "%";
 
 
                               //Fifth day forecast
@@ -1211,15 +1225,33 @@ SanFrancisco.addEventListener('click', function(){
             temph5.textContent = Math.round(F5) +'º';
             day5li1.textContent = cond5;
             day5li2.textContent = "wind: " + winddir5;
-            day5li3.textContent = "humidity: " + humidity5;
+            day5li3.textContent = "humidity: " + humidity5+"%";
     })
 })
 
-var data = fetch("https://api.openweathermap.org/data/2.5/forecast?lat=47.252876&lon=-122.444290&appid=efa45d9e21f5a963fd87caecdd3b2b02").then(function(res){
- return res.json(data)
-}).then(function(data){
 
-    // console.log(data)
+
+
+// Search Button
+var searchBtn = document.querySelector('#search')
+
+searchBtn.addEventListener('click', function(){
+var searchVal = searchBtn.value;
+if (searchVal != ''){
+    longLat = getApi(searchVal)
+}
+
 });
 
+
+
+function getApi(cityName){fetch('http://api.openweathermap.org/geo/1.0/direct?q='+cityName+'&limit-1&appid-efa45d9e21f5a963fd87caecdd3b2b02').then(function(res){
+ return res.json(data)
+}).then(function(data){
+    var lati = data[0].lat;
+    var long = data[0].lon;
+    fetch('https://api.openweathermap.org/data/2.5/forecast?lat=' +lati+ '&lon=' +long+ '&appid=efa45d9e21f5a963fd87caecdd3b2b02')
+     console.log(data)
+});
+}
   

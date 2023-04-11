@@ -14,9 +14,12 @@
     </header>
     <main>
         <aside>
-        <h1 id="search">Search for a City:</h1>
-        <form action="submit"></form>
-        <input type="text">
+        <form action="submit">
+            <label for="city">Search for a city:</label>
+            <input type="text" id="city-search" name="city-search" placeholder=" Enter city here" >
+            <button type="submit" id="search">Search</button>
+        </form>
+       
         <button id="btnSeattle">Seattle</button>
         <button id="btnChicago">Chicago</button>
         <button id="btnNY">New York</button>
@@ -25,17 +28,19 @@
         </aside>
         <section>
             <div id="text-area">
+                <div id="icon">
+                    
+                </div>
                     <div id="city-img">
                         <h2 id="city"></h2>
-                    <div id="icon">
-                        
-                    </div>
+                        <li id="temp"></li>
                 </div>
                 <ul>
-                    <li id="temp"></li>
-                    <li class="stat"></li>
-                    <li class="stat"></li>
-                    <li class="stat"></li>
+                    <li id="todaycond" class="stat"></li>
+                    <li id="todayhum"class="stat"></li>
+                    <li id="todaywdir"class="stat"></li>
+                    <li id="todaywspd"class="stat"></li>
+                    
                 </ul>
             </div>
             <div id="card-table">

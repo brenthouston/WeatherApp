@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     list-style-type: none;
+   
+    
 }
 
 :root {
@@ -21,6 +23,7 @@
     margin: 0px 0px 0px 80px 
 }
 #search{
+   
     font-size: 1.5rem;
     font-family: "forma-djr-display", sans-serif;
     font-weight: 800;
@@ -36,11 +39,12 @@
     font-family: "ff-seria-sans", sans-serif;
     font-weight: 700;
     font-style: normal;
-    width: 55rem;
+    margin: 10px;
     display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    
+    
+   
     
 }
 
@@ -64,7 +68,7 @@ header{
     font-style: normal;
     text-align: center;
     line-height: 5rem;
-    color: rgb(184, 157, 244);
+    color: rgb(149, 120, 212);
     height: 6rem;
     background: linear-gradient(0.25turn, rgb(45, 27, 80), #361f49,rgb(45, 27, 80));
 }
@@ -90,16 +94,28 @@ aside{
     text-align: center;
     margin: 10px;
 }
+
 input{
-    margin: 5px 15px 20px;
-    background-color: var(--second);
+    
     height: 2rem;
-    font-family: "josefin-sans", sans-serif;
-    font-weight: 100;
-    font-style: normal;
-    font-size: 1.25rem;
-    color: white;
+    font-size: 1rem;
+    font-family: 'Times New Roman', Times, serif;
+    color:#f3f1f4;
+    border-radius: 5px;
+    background: linear-gradient(0.30turn, rgb(45, 27, 80), #362359,rgb(45, 27, 80));
+    border: .125px solid rgb(11, 11, 11);
+    margin-bottom: 10px;
+    margin-top: 5px;
+    display: flex;
 }
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 
 button{
     color: whitesmoke;
@@ -113,7 +129,32 @@ button{
     margin-bottom: 1rem;
     border-radius: 5px;
     box-shadow: 0px 5px 10px -5px black;
+    border-style:hidden;
+    border:1px solid rgb(124, 89, 148);
 }
+
+#search {
+    color: rgb(249, 250, 250);
+    font-size: 1rem;
+    font-family: "josefin-sans", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    background: linear-gradient(0.30turn, rgb(45, 27, 80), #362359,rgb(45, 27, 80));
+    height: 2rem;
+    margin: 1px;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px -5px rgb(188, 160, 205);
+    width: 7rem;
+    line-height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: hidden;
+    border:1px solid rgb(6, 5, 6);
+   
+}
+
 
 section {
     display: flex;
@@ -124,7 +165,7 @@ section {
 
 #text-area{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items:flex-start;
     background: linear-gradient(0.25turn, rgb(76, 58, 113), #5b357a,rgb(76, 58, 113));
     border: 1px solid rgb(27, 21, 34);
@@ -149,16 +190,29 @@ section {
     width: 10rem;
     box-shadow: 0px 0px 20px -5px rgb(79, 69, 106);
     border-radius: 5px;
-    background: linear-gradient(0.25turn, rgb(45, 27, 80), #361f49,rgb(45, 27, 80));
+    background: linear-gradient(0.30turn, rgb(45, 27, 80), #362359,rgb(45, 27, 80));
     border: .125px solid rgb(155, 116, 183);
 }
 #city-img {
-    width: 55rem;
+    margin-top: 20px;
+    margin-left: 50px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
+    width: 25rem;
+    
+   
 
+}
+ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 10rem;
+    align-items: center;
+    margin-top: 2rem;
+    justify-content: right;
 }
 
 #icon{
