@@ -16,32 +16,31 @@ Project is created with:
 * Excalidraw
 
                 I used Excalidraw to create the wireframe and a checklist to keep me on task.
-![Wireframe](https://github.com/brenthouston/Portfolio/blob/main/Images/Wireframe.png)
+![Wireframe](https://github.com/brenthouston/WeatherApp/blob/main/assets/images/Screenshot%202023-04-12%20at%2010.40.39%20AM.png)
 
 * HTML
 * CSS
-* Photoshop
+* JS
+* dayjs
+* API's
+
 
 
 ## Links
 - [Link to deployed site](https://brenthouston.github.io/Portfolio/)
-- [Link to code repository](https://github.com/brenthouston/Portfolio)
+
 	
 ## Resources
 - [MDN](https://developer.mozilla.org/en-US/)
 - [W3 Schools](https://www.w3schools.com/)
-- [Clippy- clip-path generator](https://bennettfeely.com/clippy/)
-- [Adobe Fonts](https://bennettfeely.com/clippy/)
+- [Stack Overflow](https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon)
+- [Adobe Fonts](https://fonts.adobe.com/fonts)
+- [Open Weather Map](https://openweathermap.org/forecast5)
+- [Geocoding API](https://openweathermap.org/api/geocoding-api)
 
 ## Deployed App Screenshots
 
-Loaded on mobile viewport
-![Mobile viewport](https://github.com/brenthouston/Portfolio/blob/main/Images/deployed%20site%20loaded%20to%20small%20vierport.png)
+
 
 Loaded on desktop viewport
-![Desktop viewport](https://github.com/brenthouston/Portfolio/blob/main/Images/deployed%20site%20screenshot.png)
-
-
-https://stackoverflow.com/questions/44177417/how-to-display-openweathermap-weather-icon
-
-https://openweathermap.org/forecast5
+![Desktop viewport](https://github.com/brenthouston/WeatherApp/blob/main/assets/images/Screenshot%202023-04-12%20at%2010.06.20%20AM.png)
