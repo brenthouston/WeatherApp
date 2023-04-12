@@ -14,17 +14,17 @@
     </header>
     <main>
         <aside>
-        <form action="submit">
-            <label for="city">Search for a city:</label>
-            <input type="text" id="city-search" name="city-search" placeholder=" Enter city here" >
-            <button type="submit" id="search">Search</button>
-        </form>
-       
-        <button id="btnSeattle">Seattle</button>
-        <button id="btnChicago">Chicago</button>
-        <button id="btnNY">New York</button>
-        <button id="btnNewOrleans">New Orleans</button>
-        <button id="btnSanFrancisco">San Francisco</button>
+            <form action="submit" id="searchfrm">
+                <label for="city">Search for a city:</label>
+                <input type="text" id="seachInpt" name="city-search" placeholder=" Enter city here" >
+                <button type="submit" id="searchBtn">Search</button>
+            </form>
+        
+            <button id="btnSeattle">Seattle</button>
+            <button id="btnChicago">Chicago</button>
+            <button id="btnNY">New York</button>
+            <button id="btnNewOrleans">New Orleans</button>
+            <button id="btnSanFrancisco">San Francisco</button>
         </aside>
         <section>
             <div id="text-area">
@@ -32,16 +32,19 @@
                     
                 </div>
                     <div id="city-img">
+                        <p id="today-date"></p>
                         <h2 id="city"></h2>
                         <li id="temp"></li>
                 </div>
-                <ul>
-                    <li id="todaycond" class="stat"></li>
-                    <li id="todayhum"class="stat"></li>
-                    <li id="todaywdir"class="stat"></li>
-                    <li id="todaywspd"class="stat"></li>
-                    
-                </ul>
+                <div id="todaystats">
+                    <ul>
+                        <li id="todaycond" class="stat"></li>
+                        <li id="todayhum"class="stat"></li>
+                        <li id="todaywdir"class="stat"></li>
+                        <li id="todaywspd"class="stat"></li>
+                        
+                    </ul>
+                </div>
             </div>
             <div id="card-table">
                 <div id="card1" class="card">
@@ -92,5 +95,10 @@
 
 
     <script src="assets/script.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
 </body>
 </html>

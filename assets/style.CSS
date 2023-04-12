@@ -20,7 +20,7 @@
     font-family: "josefin-sans", sans-serif;
     font-weight: 100;
     font-style: normal;
-    margin: 0px 0px 0px 80px 
+    
 }
 #search{
    
@@ -43,10 +43,9 @@
     display: flex;
     flex-direction: column;
     
-    
-   
-    
 }
+
+
 
 h2{
     
@@ -70,7 +69,7 @@ header{
     line-height: 5rem;
     color: rgb(149, 120, 212);
     height: 6rem;
-    background: linear-gradient(0.25turn, rgb(45, 27, 80), #361f49,rgb(45, 27, 80));
+    background: linear-gradient(0.25turn, rgb(69, 51, 104), #361f49,rgb(69, 51, 104));
 }
 
 body{
@@ -82,6 +81,21 @@ main{
     flex-direction: row;
     margin:1rem 5rem 5rem 5rem;
 }
+
+h1{
+    color:var(--second);
+background: -webkit-linear-gradient(#d872c7,#4a26d9bd);
+-webkit-background-clip: text;
+-webkit-text-fill-color: transparent;
+font-size: 4rem;
+}
+
+
+#searchfrm{
+    display: flex;
+    flex-direction: column;
+}
+
 
 aside{
     display: flex;
@@ -109,15 +123,10 @@ input{
     display: flex;
 }
 
-form{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
 
 
 button{
+   
     color: whitesmoke;
     font-size: 1.25rem;
     font-family: "josefin-sans", sans-serif;
@@ -126,12 +135,16 @@ button{
     background: linear-gradient(0.25turn, rgb(76, 58, 113), #5b357a,rgb(76, 58, 113));
     height: 3rem;
     margin: 5px;
+    width: 10rem;
     margin-bottom: 1rem;
     border-radius: 5px;
     box-shadow: 0px 5px 10px -5px black;
     border-style:hidden;
     border:1px solid rgb(124, 89, 148);
 }
+
+
+
 
 #search {
     color: rgb(249, 250, 250);
@@ -154,6 +167,7 @@ button{
     border:1px solid rgb(6, 5, 6);
    
 }
+
 
 
 section {
@@ -201,18 +215,21 @@ section {
     justify-content: center;
     align-items: center;
     width: 25rem;
-    
-   
-
 }
+
+#setType{
+    margin-left: 20rem;
+    text-align: center;
+}
+
 ul{
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: left
+    justify-content:space-evenly;
     height: 10rem;
-    align-items: center;
-    margin-top: 2rem;
-    justify-content: right;
+    margin-top: 1rem;
+    
 }
 
 #icon{
@@ -224,11 +241,20 @@ ul{
 .card{
     display: flex;
     flex-direction: column;
-    
     align-items: center;
-    
-
 }
+
+#todaycond,
+#todayhum,
+#todaywdir,
+#todaywspd{
+    font-size: 2rem;
+    line-height: 2.5rem;
+    
+}
+
+
+
 .card .stat{
     margin: 0px;
     
@@ -238,7 +264,8 @@ ul{
 #temp2,
 #temp3,
 #temp4,
-#temp5{
+#temp5,
+#today-city-search h2{
     margin-top: 4px;
     margin-bottom: 20px;
     font-size: 4rem;
@@ -249,3 +276,16 @@ ul{
 #cardlist{
     margin-top: 20px;
 }
+.search-temp{
+    color: whitesmoke;
+    font-size: 2rem;
+    font-family: "ff-seria-sans", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+    #today-date{
+        color: whitesmoke;
+        font-family: "josefin-sans", sans-serif;
+        font-weight: 700;
+        font-style: normal;
+    }

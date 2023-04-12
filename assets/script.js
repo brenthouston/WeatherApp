@@ -23,7 +23,9 @@ Seattle.addEventListener('click', function(){
         var li4 = document.querySelector('#todaywdir');
         var li5 =document.querySelector('#todaywspd');
         var iconimg =  document.querySelector("#icon");
+        var p1 = document.querySelector('#today-date')
         var cityName = data.city.name;
+        var date = dayjs().format("MMMM DD, YYYY")
         var temp = data.list[0].main.temp;
         var cel = temp- 273.15;
         var F = (cel * 1.8) +32;
@@ -60,8 +62,8 @@ Seattle.addEventListener('click', function(){
         li2.textContent ="conditions: " + cond;
         li3.textContent = "humidity: " + humidity + " %";
         li4.textContent = "wind direction: "+ winddir;
-        li5.textContent = "wind: " +windspeed+" mph"
-
+        li5.textContent = "wind: " +windspeed+" mph";
+        p1.textContent = date;
 
     //first day forecast
     //links to html
@@ -261,22 +263,26 @@ Chicago.addEventListener('click', function(){
     }).then(function(data) {
         console.log(data);
         var Textarea = document.querySelector('#text-area')
-        var li = document.querySelector('li')
+        var li = document.querySelector('#temp')
         var CityH3 = Textarea.querySelector('h2')
+        var li2 = document.querySelector('#todaycond');
+        var li3 = document.querySelector("#todayhum");
+        var li4 = document.querySelector('#todaywdir');
+        var li5 =document.querySelector('#todaywspd');
+        var iconimg =  document.querySelector("#icon");
+        var p1 = document.querySelector('#today-date')
         var cityName = data.city.name;
+        var date = dayjs().format("MMMM DD, YYYY")
         var temp = data.list[0].main.temp;
         var cel = temp- 273.15;
         var F = (cel * 1.8) +32;
-        var li2 = document.querySelector('ul').children[1];
         var cond = data.list[0].weather[0].description;
         var icon = data.list[0].weather[0].icon;
         var iconurl = "http://openweathermap.org/img/w/"+ icon + ".png";
-        var iconimg =  document.querySelector("#icon");
-        var li3 = document.querySelector("ul").children[2];
         var wind = data.list[0].wind.deg
         var winddir = '';
-        var li4 = document.querySelector('ul').children[3];
         var humidity = data.list[0].main.humidity
+        var windspeed = data.list[0].wind.speed;
         
             if(wind >= 337 || wind < 22){
                 winddir = "N"
@@ -300,10 +306,15 @@ Chicago.addEventListener('click', function(){
         iconimg.innerHTML = "<img src='" +iconurl + "'/>";
         li.textContent = Math.round(F)+' º';
         CityH3.textContent = cityName;
-        li2.textContent ="conditions: "+  cond;
-        li3.textContent = "wind direction: "+ winddir;
-        li4.textContent = "humidity: " + humidity+"%";
+        li2.textContent ="conditions: " + cond;
+        li3.textContent = "humidity: " + humidity + " %";
+        li4.textContent = "wind direction: "+ winddir;
+        li5.textContent = "wind: " +windspeed+" mph";
+        p1.textContent = date;
 
+
+
+       
 
 
     //first day forecast
@@ -510,7 +521,9 @@ NewYork.addEventListener('click', function(){
         var li4 = document.querySelector('#todaywdir');
         var li5 =document.querySelector('#todaywspd');
         var iconimg =  document.querySelector("#icon");
+        var p1 = document.querySelector('#today-date');
         var cityName = data.city.name;
+        var date = dayjs().format("MMMM DD, YYYY");
         var temp = data.list[0].main.temp;
         var cel = temp- 273.15;
         var F = (cel * 1.8) +32;
@@ -547,7 +560,8 @@ NewYork.addEventListener('click', function(){
         li2.textContent ="conditions: " + cond;
         li3.textContent = "humidity: " + humidity + " %";
         li4.textContent = "wind direction: "+ winddir;
-        li5.textContent = "wind: " +windspeed+" mph"
+        li5.textContent = "wind: " +windspeed+" mph";
+        p1.textContent = date;
 
 
     //first day forecast
@@ -754,7 +768,9 @@ NewOrleans.addEventListener('click', function(){
         var li4 = document.querySelector('#todaywdir');
         var li5 =document.querySelector('#todaywspd');
         var iconimg =  document.querySelector("#icon");
+        var p1 = document.querySelector('#today-date');
         var cityName = data.city.name;
+        var date = dayjs().format("MMMM DD, YYYY");
         var temp = data.list[0].main.temp;
         var cel = temp- 273.15;
         var F = (cel * 1.8) +32;
@@ -791,7 +807,8 @@ NewOrleans.addEventListener('click', function(){
         li2.textContent ="conditions: " + cond;
         li3.textContent = "humidity: " + humidity + " %";
         li4.textContent = "wind direction: "+ winddir;
-        li5.textContent = "wind: " +windspeed+" mph"
+        li5.textContent = "wind: " +windspeed+" mph";
+        p1.textContent = date;
 
 
 
@@ -999,6 +1016,8 @@ SanFrancisco.addEventListener('click', function(){
         var li4 = document.querySelector('#todaywdir');
         var li5 =document.querySelector('#todaywspd');
         var iconimg =  document.querySelector("#icon");
+        var p1 = document.querySelector('#today-date');
+        var date = dayjs().format("MMMM DD, YYYY");
         var cityName = data.city.name;
         var temp = data.list[0].main.temp;
         var cel = temp- 273.15;
@@ -1036,7 +1055,8 @@ SanFrancisco.addEventListener('click', function(){
         li2.textContent ="conditions: " + cond;
         li3.textContent = "humidity: " + humidity + " %";
         li4.textContent = "wind direction: "+ winddir;
-        li5.textContent = "wind: " +windspeed+" mph"
+        li5.textContent = "wind: " +windspeed+" mph";
+        p1.textContent = date;
 
 
     //first day forecast
@@ -1232,26 +1252,81 @@ SanFrancisco.addEventListener('click', function(){
 
 
 
-// Search Button
-var searchBtn = document.querySelector('#search')
+//Search Button   I used ChatGPT to assist with the city search fetch. You can see below this block of code I was on the right track but I needed help.  I did not copy paste from Chat GPT but I relied on it for help with the async function.
+var form = document.querySelector('#searchfrm')
+var seachInpt = document.querySelector('#seachInpt')
 
-searchBtn.addEventListener('click', function(){
-var searchVal = searchBtn.value;
-if (searchVal != ''){
-    longLat = getApi(searchVal)
+form.addEventListener('submit', function(e){
+ e.preventDefault();
+ var cityName = seachInpt.value.trim();
+ getForecast(cityName);
+});
+
+async function getForecast(cityName) {
+    var apiKey = 'efa45d9e21f5a963fd87caecdd3b2b02';
+    var apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}`;
+    
+    try {
+        var response = await fetch(apiUrl);
+        var data = await response.json();
+        displayForecast(data);
+    }  catch(error) {
+        console.log(error);
+    }
 }
 
-});
+function displayForecast(data) {
+    var city = data.name;
+    var temp = Math.round(data.main.temp - 273.15);
+    var desc = data.weather[0].description;
+    var icon = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+   
+    var date = dayjs().format('MMMM D YYYY')
+    var result =`
+        <div id="setType">
+            <h2>${city}</h2>
+            <p class="stat">${date}<p>
+            <p class="search-temp">${temp +32}&deg;</p>
+            <img src="${icon}" alt="${desc}"/>
+                <p class="stat">${desc}</p>
+            </div>
+`
 
-
-
-function getApi(cityName){fetch('http://api.openweathermap.org/geo/1.0/direct?q='+cityName+'&limit-1&appid-efa45d9e21f5a963fd87caecdd3b2b02').then(function(res){
- return res.json(data)
-}).then(function(data){
-    var lati = data[0].lat;
-    var long = data[0].lon;
-    fetch('https://api.openweathermap.org/data/2.5/forecast?lat=' +lati+ '&lon=' +long+ '&appid=efa45d9e21f5a963fd87caecdd3b2b02')
-     console.log(data)
-});
+var output = document.querySelector('#text-area');
+output.innerHTML =result
 }
   
+
+
+// Below are my attempts at pulling the city search fetch
+// function getApi(cityName) {
+//     fetch('https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=efa45d9e21f5a963fd87caecdd3b2b02')
+//       .then(function(res) {
+//         return res.json();
+//       })
+//       .then(function(data) {
+//         console.log(data);
+
+//       });
+//   }
+  
+// var cityName = document.querySelector('#text').value;
+// var requestUrl = 'https://api.openweathermap.org/data/2.5/forecast?q=' + cityName + '&appid=efa45d9e21f5a963fd87caecdd3b2b02';
+// var responseText = document.querySelector('#response');
+
+// function getApi(requestUrl) {
+//   fetch(requestUrl)
+//     .then(function (response) {
+//       console.log(response);
+//       if (response.status === 200) {
+//         responseText.textContent = response.status;
+//       }
+//       return response.json();
+//   });
+// }
+
+// getApi(requestUrl);
+
+ 
+  
+ 
